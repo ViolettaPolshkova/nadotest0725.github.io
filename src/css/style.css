@@ -2,17 +2,17 @@
 
 header {
     width: 1280px;
-    margin: 0 auto;
     height: 130px;
+    margin: auto;
     background-color: var(--grey);
 }
 
 #navigation {
+    padding: 0 3%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding: 0 40px;
     position: relative;
 }
 
@@ -142,4 +142,111 @@ header {
     position: absolute;
     left: 0;
     bottom: 0;
+}
+
+/* Основной контент */
+
+#main {
+    position: relative;
+    height: 670px;
+    width: 1280px;
+    background-image: url('../img/bg1.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Окно с текстом в правом углу */
+
+#main_info {
+    background-color: var(--ghost);
+    width: 482px;
+    padding: 15px 29px;
+    position: relative;
+    margin-left: auto;
+}
+
+#main_info h2 {
+    color: var(--black);
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-style: italic;
+    margin: 0;
+}
+
+#main_info h3 {
+    font-weight: 300;
+    color: var(--black);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    margin: 15px 0 0 0;
+}
+
+/* Открывающееся меню */
+
+#sub_info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    position: absolute;
+    bottom: 0;
+    margin: 0 3%;
+    padding-top: 20px;
+}
+
+.sub_block {
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.sub_block h2 {
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin: 0;
+}
+
+.sub_block h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    flex: 1;
+    display: flex;
+    align-items: end;
+}
+
+.sub_block h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin: 8px 0 0 0;
+    text-align: end;
+}
+
+.yellow {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.yellow h3 {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.white {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.black {
+    background-color: var(--black);
+    color: var(--white);
 }
