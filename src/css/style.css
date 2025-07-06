@@ -144,16 +144,35 @@ header {
 
 /* Основной контент */
 
+@keyframes slide {
+    0% {
+        background-image: url('../img/bg1.jpg');
+    }
+
+    50% {
+        background-image: url('../img/bg1.jpg');
+    }
+
+    51% {
+        background-image: url('../img/bg2.jpg');
+        /* Исправлено на bg2.jpg */
+    }
+
+    100% {
+        background-image: url('../img/bg2.jpg');
+    }
+}
+
 #main {
     position: relative;
     height: 670px;
     width: 1280px;
-    background-image: url('../img/bg1.jpg');
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
     margin: 0 auto;
+    animation: slide 30s infinite;
 }
 
 /* Окно с текстом в правом углу */
@@ -184,14 +203,30 @@ header {
 
 /* Открывающееся меню */
 
+.toggle-button {
+    background-color: white;
+    width: 88px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    z-index: 10;
+}
+
 #sub_info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     position: absolute;
-    bottom: 0;
+    bottom: -174px;
     margin: 0 3%;
-    padding-top: 20px;
+    transition: transform 0.5s ease;
 }
 
 .sub_block {
@@ -259,6 +294,8 @@ footer {
     box-sizing: border-box;
     margin: 0 auto;
     color: white;
+    position: relative;
+    z-index: 1;
 }
 
 footer a {
