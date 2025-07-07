@@ -1,5 +1,5 @@
 header {
-    width: 1280px;
+    width: 100%;
     height: 130px;
     margin: auto;
     background-color: var(--grey);
@@ -95,7 +95,16 @@ header {
 
 .topmenu a:hover {
     color: var(--yellow);
+    text-decoration: underline;
+}
 
+.topmenu a:active {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.topmenu a:focus {
+  text-decoration: underline;
 }
 
 /* Подменю */
@@ -166,7 +175,7 @@ header {
 #main {
     position: relative;
     height: 670px;
-    width: 1280px;
+    width: 100%;
     background-position: center;
     background-size: cover;
     display: flex;
@@ -204,7 +213,7 @@ header {
 /* Открывающееся меню */
 
 .toggle-button {
-    background-color: white;
+    background-color: var(--white);
     width: 88px;
     height: 30px;
     display: flex;
@@ -224,7 +233,7 @@ header {
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     position: absolute;
-    bottom: -174px;
+    bottom: -170px;
     margin: 0 3%;
     transition: transform 0.5s ease;
 }
@@ -232,11 +241,11 @@ header {
 .sub_block {
     width: 100%;
     padding: 12px 15px;
+    height: 170px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
 }
 
 .sub_block h2 {
@@ -287,20 +296,34 @@ header {
 /* Футер */
 
 footer {
-    width: 1280px;
+    width: auto;
     height: auto;
     background-color: var(--grey);
     padding: 36px 0 0 0;
     box-sizing: border-box;
     margin: 0 auto;
-    color: white;
+    color: var(--white);
     position: relative;
     z-index: 1;
 }
 
 footer a {
-    color: white;
-    text-decoration: none;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--yellow);
+  text-decoration: underline;
+}
+
+footer a:active {
+  color: var(--green);
+  text-decoration: underline;
+}
+footer a:focus {
+  text-decoration: underline;
 }
 
 /* Верхние объекты */
@@ -338,7 +361,7 @@ footer a {
     font-family: 'Playfair Display', serif;
     font-weight: 300;
     font-size: 15px;
-    color: white;
+    color: var(--white);
     margin: 0 0 21px;
 }
 
@@ -460,4 +483,41 @@ footer a {
 
 #lang li {
     margin-left: 21px;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 15% auto;
+    padding: 10px 20px;
+    border: 1px solid var(--black);
+    width: 80%;
+    max-width: 600px; 
+    position: relative;
+}
+
+.close {
+    color: var(--grey);
+    float: right; 
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--black);
+    text-decoration: none;
+    cursor: pointer;
 }
